@@ -1,0 +1,8 @@
+.header {
+   
+    padding: 50px;
+}
+.header h1{
+    color: rgb(19, 132, 150) !important;
+    font-weight: 800;
+}

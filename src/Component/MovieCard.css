@@ -1,0 +1,8 @@
+.movieCard{
+    border: 1px solid red;
+    margin: 50px;
+    border-radius: 6px;
+}
+.movieCard :hover{
+    box-shadow: 0 20px 50px 0 rgba(0,0,0,.50);
+}
