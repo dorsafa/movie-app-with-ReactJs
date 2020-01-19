@@ -5,10 +5,10 @@ import Modals from './Modals'
 import { Form, FormControl, Button } from 'react-bootstrap';
 import Rater from 'react-rater'
 import 'react-rater/lib/react-rater.css'
+import Hoc from './LoadingHOC'
 
 
-
-export default class MovieList extends Component {
+ class MovieList extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -22,6 +22,7 @@ export default class MovieList extends Component {
 
             search: '',
             rating: 0,
+            loading:true,
         }
     }
 
@@ -46,6 +47,14 @@ export default class MovieList extends Component {
             rating:e.rating
         })
     }
+
+    componentDidMount=()=>{
+        setTimeout(()=>
+          this.setState({
+          loading:false
+          }), 2000
+        )
+      }
 
     render() {
         return (
@@ -76,3 +85,5 @@ export default class MovieList extends Component {
         )
     }
 }
+
+export default Hoc(MovieList);
